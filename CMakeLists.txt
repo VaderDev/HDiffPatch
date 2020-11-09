@@ -2,6 +2,12 @@ cmake_minimum_required(VERSION 2.6)
 project(hdiffpatch)
 
 
+set(HDIFF_VERSION_TAG "" CACHE STRING "HDIFF_VERSION_TAG override, default is HDIFF13")
+
+if (HDIFF_VERSION_TAG)
+	add_definitions(-DHDIFF_VERSION_TAG="\"${HDIFF_VERSION_TAG}\"")
+endif()
+
 set(CMAKE_THREAD_PREFER_PTHREAD TRUE)
 set(THREADS_PREFER_PTHREAD_FLAG TRUE)
 find_package(Threads REQUIRED)

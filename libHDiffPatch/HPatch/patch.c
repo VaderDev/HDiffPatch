@@ -39,6 +39,10 @@
 //int __debug_check_false_x=0; //for debug
 //#define _hpatch_FALSE (1/__debug_check_false_x)
 
+#ifndef HDIFF_VERSION_TAG
+#define HDIFF_VERSION_TAG "HDIFF13"
+#endif
+
 static const int kSignTagBit=1;
 typedef unsigned char TByte;
 #define TUInt size_t
@@ -931,7 +935,7 @@ hpatch_BOOL read_diffz_head(hpatch_compressedDiffInfo* out_diffInfo,_THDiffzHead
     _TStreamCacheClip_init(&_diffHeadClip,compressedDiff,0,compressedDiff->streamSize,
                            temp_cache,hpatch_kStreamCacheSize);
     {//type
-        const char* kVersionType="HDIFF13";
+        const char* kVersionType=HDIFF_VERSION_TAG;
         char* tempType=out_diffInfo->compressType;
         if (!_TStreamCacheClip_readType_end(diffHeadClip,'&',tempType)) return _hpatch_FALSE;
         if (0!=strcmp(tempType,kVersionType)) return _hpatch_FALSE;

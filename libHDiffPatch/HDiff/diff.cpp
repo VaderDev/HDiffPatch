@@ -40,7 +40,10 @@
 #include "../HPatch/patch_private.h"
 using namespace hdiff_private;
 
-static const char* kHDiffVersionType="HDIFF13";
+#ifndef HDIFF_VERSION_TAG
+#define HDIFF_VERSION_TAG "HDIFF13"
+#endif
+static const char* kHDiffVersionType=HDIFF_VERSION_TAG;
 
 #define checki(value,info) { if (!(value)) { throw std::runtime_error(info); } }
 #define check(value) checki(value,"check "#value" error!")
