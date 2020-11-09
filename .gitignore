@@ -18,3 +18,7 @@ ReleaseSFX
 *.exe
 builds/android_ndk_jni_mk/libs
 builds/android_ndk_jni_mk/obj
+
+build
+install
+

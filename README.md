@@ -1,3 +1,6 @@
+**VaderY/HDiffPatch** is a fork that includes:
+- Minimal CMake support for the library
+
 # [HDiffPatch](https://github.com/sisong/HDiffPatch)
 [![release](https://img.shields.io/badge/release-v3.0.9-blue.svg)](https://github.com/sisong/HDiffPatch/releases) 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sisong/HDiffPatch/blob/master/LICENSE) 
